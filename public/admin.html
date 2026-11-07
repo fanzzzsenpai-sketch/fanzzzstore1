@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owner Panel | Fanzzz Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="bg">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <header class="nav glass">
+    <a class="logo" href="/">FANZZZ<span>.owner</span></a>
+    <span class="pill">Owner Panel</span>
+  </header>
+
+  <main class="admin">
+    <section id="login" class="glass login">
+      <h2>Masuk Owner</h2>
+      <form id="login-form" class="form" style="padding:0;">
+        <input id="key" type="password" placeholder="Kunci owner (ADMIN_KEY)" required>
+        <button class="btn full" type="submit">Masuk</button>
+        <p id="login-msg" class="msg"></p>
+      </form>
+    </section>
+
+    <section id="dash" class="dash" hidden>
+      <aside class="glass list-wrap">
+        <h3>Pesanan</h3>
+        <div id="order-list" class="order-list"></div>
+      </aside>
+
+      <div class="glass detail">
+        <div id="detail-empty" class="muted">Pilih pesanan di sebelah kiri.</div>
+        <div id="detail" hidden>
+          <div class="chat-head">
+            <div>
+              <h3 id="detail-title"></h3>
+              <small id="detail-meta"></small>
+            </div>
+            <select id="status-select">
+              <option>Menunggu Pembayaran</option>
+              <option>Pembayaran Diterima</option>
+              <option>Diproses</option>
+              <option>Selesai</option>
+              <option>Dibatalkan</option>
+            </select>
+          </div>
+          <div id="admin-chat" class="chat-list"></div>
+          <form id="reply-form" class="chat-form">
+            <input id="reply-input" placeholder="Balas pembeli..." maxlength="500" autocomplete="off">
+            <button class="btn-sm" type="submit">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.ably.com/lib/ably.min-1.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
