@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fanzzz Store | Followers Roblox</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="bg">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <header class="nav glass">
+    <a class="logo" href="/">FANZZZ<span>.store</span></a>
+    <nav>
+      <a href="#paket">Paket</a>
+      <a href="#order">Order</a>
+      <a href="#chat">Chat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="tag glass">Followers Roblox · Cepat · Aman</p>
+      <h1>
+        <span class="line">Naikkan</span>
+        <span class="line">Followers</span>
+        <span class="line">Roblox-mu</span>
+      </h1>
+      <p class="sub">Maksimal 1.500 followers per pesanan. Bayar lewat DANA atau QRIS, lalu chat langsung dengan owner di website ini.</p>
+      <a href="#order" class="btn">Mulai Order</a>
+    </section>
+
+    <section id="paket" class="section">
+      <h2>Pilih Paket</h2>
+      <div class="packages">
+        <button type="button" class="pkg glass" data-qty="100">
+          <span class="qty">100</span>
+          <span class="lbl">Followers</span>
+          <span class="price">Rp 6.000</span>
+        </button>
+        <button type="button" class="pkg glass" data-qty="1000">
+          <span class="qty">1.000</span>
+          <span class="lbl">Followers</span>
+          <span class="price">Rp 26.000</span>
+        </button>
+        <button type="button" class="pkg glass" data-qty="1500">
+          <span class="qty">1.500</span>
+          <span class="lbl">Followers</span>
+          <span class="price">Rp 37.000</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="order" class="section">
+      <h2>Form Order</h2>
+      <form id="order-form" class="glass form" novalidate>
+        <label>
+          Username Roblox
+          <input id="username" name="username" placeholder="contoh: Fanzzz_Senpai" maxlength="20" autocomplete="off" required>
+        </label>
+        <input type="hidden" id="qty" name="qty">
+
+        <fieldset>
+          <legend>Metode Pembayaran</legend>
+          <label class="opt glass-sm">
+            <input type="radio" name="payment" value="DANA"> <span>DANA</span>
+          </label>
+          <label class="opt glass-sm">
+            <input type="radio" name="payment" value="QRIS"> <span>QRIS</span>
+          </label>
+        </fieldset>
+
+        <div id="pay-info" class="pay-info"></div>
+        <div id="summary" class="summary">Pilih paket dulu</div>
+
+        <button class="btn full" type="submit">Pesan Sekarang</button>
+        <p id="form-msg" class="msg"></p>
+      </form>
+    </section>
+
+    <section id="chat" class="section">
+      <h2>Chat Owner</h2>
+      <p id="chat-empty" class="muted glass-sm" style="padding:20px;text-align:center;">Chat akan muncul setelah kamu membuat pesanan.</p>
+      <div id="chat-panel" class="glass chat" hidden>
+        <div class="chat-head">
+          <div>
+            <h3 id="chat-title">Chat</h3>
+            <small id="order-status"></small>
+          </div>
+          <span id="chat-status" class="pill">Offline</span>
+        </div>
+        <div id="chat-list" class="chat-list"></div>
+        <form id="chat-form" class="chat-form">
+          <input id="chat-input" placeholder="Tulis pesan atau kirim bukti bayar..." maxlength="500" autocomplete="off">
+          <button class="btn-sm" type="submit">Kirim</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="muted">© Fanzzz Store</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.ably.com/lib/ably.min-1.js"></script>
+  <script src="/js/config.js"></script>
+  <script src="/js/chat.js"></script>
+  <script src="/js/store.js"></script>
+</body>
+</html>
